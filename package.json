@@ -1,0 +1,51 @@
+{
+  "name": "mini-event-bus",
+  "version": "1.0.0",
+  "description": "A lib for js and mini program that simplifies communication between Pages and Components, written by typescript.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "tsc && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mecoepcoo/mini-event-bus.git"
+  },
+  "keywords": [
+    "eventbus",
+    "miniprogram",
+    "page-communication"
+  ],
+  "author": "tianzhen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mecoepcoo/mini-event-bus/issues"
+  },
+  "homepage": "https://github.com/mecoepcoo/mini-event-bus#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@rollup/plugin-typescript": "^3.0.0",
+    "@types/node": "^13.7.6",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "rollup": "^1.32.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "standard-version": "^7.1.0",
+    "typescript": "^3.8.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
