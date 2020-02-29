@@ -1,5 +1,5 @@
 {
-  "name": "mini-event-bus",
+  "name": "event-bus-ts",
   "version": "1.0.0",
   "description": "A lib for js and mini program that simplifies communication between Pages and Components, written by typescript.",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mecoepcoo/mini-event-bus.git"
+    "url": "git+https://github.com/mecoepcoo/event-bus-ts.git"
   },
   "keywords": [
     "eventbus",
