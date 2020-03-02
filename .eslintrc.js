@@ -7,5 +7,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
   'plugins': ['@typescript-eslint'],
-  'rules': {}
+  'rules': {
+    'semi': [2, 'never'],
+    '@typescript-eslint/no-explicit-any': 'off'
+  }
 }
