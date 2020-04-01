@@ -46,9 +46,9 @@ export default class EventBus {
           }
         } else {
           events.splice(+i, 1)
+          return this
         }
       }
-      return this
     }
     return this
   }
