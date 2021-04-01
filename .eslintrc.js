@@ -9,6 +9,7 @@ module.exports = {
   'plugins': ['@typescript-eslint'],
   'rules': {
     'semi': [2, 'never'],
-    '@typescript-eslint/no-explicit-any': 'off'
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-use-before-define': 0,
   }
 }

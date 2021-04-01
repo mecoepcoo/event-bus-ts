@@ -4,7 +4,7 @@ export default class EventBus {
   private _events: Event[] = []
   private _uid = 0
   
-  get events() {
+  get events(): Event[] {
     return this._events
   }
 
@@ -39,12 +39,13 @@ export default class EventBus {
    * @param name 事件名
    * @param execute 执行函数
    */
-   registerOnce(name: string, execute: Function) {
+  registerOnce(name: string, execute: Function): void {
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
     const _this = this
     const eventId = this.register(name, handler)
-    function handler() {
+    function handler(...args: []): void {
       _this.unregister(name, eventId)
-      execute.apply(null, arguments)
+      execute(...args)
     }
   }
   /**
@@ -73,7 +74,7 @@ export default class EventBus {
   /**
    * 退订全部事件
    */
-   unregisterAll() {
+  unregisterAll(): void {
     this._events = []
   }
   /**
